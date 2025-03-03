@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Getting started with CSS</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="magnifier.js" defer></script>
+</head>
+
+<body>
+  <h1>Natsu kawaii!</h1>
+
+  <p>
+    This is a simple example of an image magnifier. Hover over the image to see the magnified version.
+  </p>
+  <div class="root-container">
+    <div class="card-container">
+      <div class="card" id="natsu-card">
+        <img class="card-image" src="natsu.jpg" alt="Natsu" />
+        <div class="card-body">
+          <h2>Yutori Natsu</h2>
+          <p>Natsu has a habit of saying
+            philosophical things out of the blue and using sweets as a metaphor. While her erratic outbursts always
+            leave everyone bamboozled, in reality she simply has the pure intention of wanting to share in the
+            romanticism with everyone.</p>
+        </div>
+        <div class="card-footer">
+          <a class="buruaka" href="https://bluearchive.jp/"
+              alt="Blue Archive official site" title="Blue Archive!">Blue Archive</a>
+        </div>
+      </div>
+    </div>
+    <div class="magnifier-container">
+      <img class="magnifier-image" src="natsu.jpg" alt="">
+      <div class="zoom-area"></div>
+    </div>
+  </div>
+</body>
+
+</html>
