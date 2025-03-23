@@ -1,6 +1,6 @@
 # Image Magnifier
 
-[简体中文](readme-cn.md)
+[简体中文](readme.zh-cn.md)
 
 This is a simple image magnifier that uses pure JavaScript and CSS. 
 
@@ -36,6 +36,7 @@ Now move the magnified image so that the two points coincide. Remember that the 
 Now we can find that the coordinates of the magnified image's top-left corner is $(-x^{'}+zoomAreaWidth/2, -y^{'}+zoomAreaHeight/2)$.
 
 <!-- 为什么网页里有一张旋转的卡片 -->
+
 ## Why is there a rotating card in the webpage?
 
 Anyway, she's cute. 😊

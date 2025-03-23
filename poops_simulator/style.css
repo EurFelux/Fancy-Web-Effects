@@ -1,0 +1,187 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #f1f1f1;
+}
+
+header {
+    border-bottom: 4px solid red;
+    border-top: 4px solid red;
+    width: 100%;
+    text-align: center;
+    margin: 1em 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.interactive-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main p {
+    text-align: center;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: #f1f1f1;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 1em;
+}
+
+#poops {
+    font-size: 2em;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    top: 70%;
+    left: 5%;
+}
+
+#toilet {
+    background: url(./toilet.jpg) no-repeat;
+    background-size: cover;
+}
+
+#face {
+    display: block;
+    font-size: 14em;
+    user-select: none;
+    cursor: pointer;
+    transition: vibrating 0.5s;
+    position: relative;
+}
+
+#face.vibrating {
+    filter: hue-rotate(90deg);
+}
+
+#face::before {
+    content: "👊";
+    position: absolute;
+    top: -10%;
+    left: -40%;
+    /* display: block; */
+    /* width: 1em;
+            height: 1em; */
+    font-size: 1em;
+    color: white;
+    opacity: 0;
+}
+
+#face.punch::before {
+    transition: punch 0.5s;
+    animation: punch 0.5s;
+}
+
+.vibrating {
+    animation: vibrating 1s infinite;
+}
+
+.rainbow-border {
+    color: white;
+    -webkit-text-stroke: 1px red;
+    animation: rainbow_effect 5s infinite;
+    transition: rainbow_effect 0.2s;
+}
+
+@keyframes rainbow_effect {
+    0% {
+        color: purple;
+        -webkit-text-stroke-color: red;
+    }
+
+    20% {
+        color: red;
+        -webkit-text-stroke-color: orange;
+    }
+
+    40% {
+        color: orange;
+        -webkit-text-stroke-color: yellow;
+    }
+
+    60% {
+        color: yellow;
+        -webkit-text-stroke-color: green;
+    }
+
+    80% {
+        color: green;
+        -webkit-text-stroke-color: blue;
+    }
+
+    100% {
+        color: blue;
+        -webkit-text-stroke-color: purple;
+    }
+}
+
+@keyframes vibrating {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(2px, -2px);
+    }
+
+    50% {
+        transform: translate(-4px, 4px);
+    }
+
+    75% {
+        transform: translate(2px, 2px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes punch {
+    0% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    25% {
+        transform: scale(2.6);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(4.7);
+        opacity: 1;
+    }
+
+    75% {
+        transform: scale(2.6);
+        opacity: 0.9;
+    }
+
+    90% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
